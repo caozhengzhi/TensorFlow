@@ -1,0 +1,41 @@
+Last login: Fri Sep 15 21:04:52 on ttys000
+ZhengzhideMBP:~ zhengzhicao$ python
+Python 3.6.1 |Anaconda 4.4.0 (x86_64)| (default, May 11 2017, 13:04:09) 
+[GCC 4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import numpy as np
+>>> import matplotlib.pyplot as plt
+>>> np.random.seed(123)
+>>> p1 = 0.3
+>>> p2 = 0.7
+>>> mu1 = 0.0
+>>> mu2 = 5.0
+>>> sigma1 = 1.0
+>>> sigma2 = 1.5
+>>> N = 1000
+>>> x = np.zeros(N)
+>>> ind = np.random.binomial(1,p1,N).astype('bool_)
+  File "<stdin>", line 1
+    ind = np.random.binomial(1,p1,N).astype('bool_)
+                                                  ^
+SyntaxError: EOL while scanning string literal
+>>> ind = np.random.binomial(1,p1,N).astype('bool_')
+>>> n1 = ind.sum()
+>>> n1 = ind.sum()
+>>> x[np.logical_not(ind)] = np.random.normal(mu2, sigma2, N - n1)
+>>> plt.hist(x, bins=30)
+(array([ 287.,    0.,    1.,    0.,    1.,    5.,    7.,   14.,   15.,
+         17.,   27.,   27.,   53.,   38.,   62.,   63.,   48.,   67.,
+         64.,   52.,   41.,   34.,   25.,   14.,   17.,    7.,    5.,
+          5.,    3.,    1.]), array([ 0.        ,  0.30499682,  0.60999364,  0.91499046,  1.21998728,
+        1.5249841 ,  1.82998092,  2.13497774,  2.43997456,  2.74497138,
+        3.0499682 ,  3.35496502,  3.65996184,  3.96495866,  4.26995548,
+        4.5749523 ,  4.87994912,  5.18494594,  5.48994276,  5.79493958,
+        6.0999364 ,  6.40493322,  6.70993004,  7.01492687,  7.31992369,
+        7.62492051,  7.92991733,  8.23491415,  8.53991097,  8.84490779,
+        9.14990461]), <a list of 30 Patch objects>)
+>>> plt.show()
+>>> plt.show()
+>>> 
+>>> 
+
